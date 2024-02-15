@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Animal } from './Models';
+import { Animal,Stagiaire } from './Models';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -19,5 +19,12 @@ export class AppComponent {
   names:string[] = ["ahmed","anne","teddy","pierre"];
   animals : Animal[] = [new Animal(1,"Chien",10,12), new Animal(2,"Chat",10,12),new Animal(3,"Poisson",1,12), new Animal(4,"Oiseau",1,2)];
 
+  stagiaire1 = new Stagiaire("Darwiche","Ahmed","alexis@sfr.fr");
+  stagiaire2 = new Stagiaire("Wakhsas","Abdelilah","abdelilah@sfr.fr");
+  stagiaire3 = new Stagiaire("Nérin","Benoit","benoit@sfr.fr");
+  stagiaire4 = new Stagiaire("Benarab","Fatima","fatima@sfr.fr");
+  stagiaire5 = new Stagiaire("Dangning","Hu","hu@sfr.fr");
+
+  stagiaires: Stagiaire[] =[this.stagiaire1,this.stagiaire2,this.stagiaire3,this.stagiaire4,this.stagiaire5];
 }
 

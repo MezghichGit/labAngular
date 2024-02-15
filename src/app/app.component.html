@@ -18,3 +18,20 @@
     <td>{{animal.taille}}</td>
   </tr>
 </table>
+
+<table align="center" border="1px solid">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stagiaire of stagiaires">
+      <td> {{stagiaire.nom}}</td>
+      <td> {{stagiaire.prenom}}</td>
+      <td> {{stagiaire.email}}</td>
+    </tr>
+  </tbody>
+</table>
