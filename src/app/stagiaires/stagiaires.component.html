@@ -2,6 +2,8 @@
 
 <img [src]="logo"/>
 
-<h4>Coach : {{formateur}}</h4>
+<h4>Coach : {{formateur | uppercase | mypipe}}</h4>
 
 <button (click)="greeting()" class="btn btn-primary">Cliquer</button>
+
+<h2 *ngIf="afficherMsg">Consommation des API</h2>
