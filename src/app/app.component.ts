@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { Animal,Stagiaire } from './Models';
 import { CommonModule } from '@angular/common';
 import { StagiairesComponent } from "./stagiaires/stagiaires.component";
+import { PostComponent } from "./post/post.component";
 
 
 @Component({
@@ -10,7 +11,7 @@ import { StagiairesComponent } from "./stagiaires/stagiaires.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, CommonModule, StagiairesComponent]
+    imports: [RouterOutlet, CommonModule, StagiairesComponent, PostComponent]
 })
 
 
