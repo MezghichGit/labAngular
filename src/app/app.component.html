@@ -1,37 +1,5 @@
-<h1>Welcome GK</h1
->
-{{title}}
-<br/>
-{{formateur}}
-<br/>
-{{names[0]}}
-{{names[1]}}
-<br/>
-{{animals[0].infoAnimal()}}
+<h1>Welcome GK</h1>
+<hr />
+<app-stagiaires></app-stagiaires>
+<hr />
 
-<table align="center" border="1">
-  <tr><th>ID</th><th>Espece</th><th>Poids</th><th>Taille</th></tr>
-  <tr *ngFor="let animal of animals">
-    <td>{{animal.id}}</td>
-    <td>{{animal.espece}}</td>
-    <td>{{animal.poids}}</td>
-    <td>{{animal.taille}}</td>
-  </tr>
-</table>
-
-<table align="center" border="1px solid">
-  <thead>
-    <tr>
-      <th>Nom</th>
-      <th>Prénom</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let stagiaire of stagiaires">
-      <td> {{stagiaire.nom}}</td>
-      <td> {{stagiaire.prenom}}</td>
-      <td> {{stagiaire.email}}</td>
-    </tr>
-  </tbody>
-</table>
