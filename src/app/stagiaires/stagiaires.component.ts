@@ -18,13 +18,21 @@ export class StagiairesComponent implements OnInit {
 
   afficherMsg: boolean = true;
   msg:string="";
+  users:any;
   // injection d'une dépendance : Sevice Stagiaire
   constructor(private serviceStagiaire: StagiaireService) {
     console.log("Constructeur");
   }
   ngOnInit(): void {
-    console.log("ngOnInit");
+    //console.log("ngOnInit");
     this.msg = this.serviceStagiaire.getData();  //prepare les data
+
+    this.serviceStagiaire.getUsers().subscribe(
+
+      response=> this.users = response,
+
+      error => console.log(error+"Problème dans l'api")
+    );
   }
 
 
@@ -33,6 +41,7 @@ export class StagiairesComponent implements OnInit {
    // this.afficherMsg = !this.afficherMsg;
 
    alert(this.msg);
+   console.log(this.users)
   }
 
   bye() {
